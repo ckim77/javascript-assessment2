@@ -105,7 +105,7 @@ let foodArr = [
         category: 'main',
         popularity: 4,
         rating: 3,
-        tags: ['cheap','thick-crust', 'extra-cheese']
+        tags: ['cheap','thick-crust', 'extra-cheese', 'thin-crust']
     },
     {
         name: 'combo',
@@ -149,11 +149,15 @@ const filteredFood = foodArr.filter(x => x.tags.includes('extra-cheese'))
 // console.log(filteredFood)
 
 
+// Jeddy review code
+const tagSearch = (search) => foodArr.filter((ele) => ele.tags.includes(search))
+// console.log (tagSearch("thin-crust"))
+
 
 //////////////////PROBLEM 5////////////////////
 /* 
     Now let's write a function that's a little
-    more flexible than just filtering for one
+    more flexible than just filtering for onek 
     value. We want to be able to filter for 
     food that has above a certain rating, 
     below a certain price, or any other combo.
@@ -189,13 +193,14 @@ const filteredFood = foodArr.filter(x => x.tags.includes('extra-cheese'))
     Return the filtered array from the entire function
 */
 
-const filterByProperty = (property, number, type) => {    
-    if (type === 'above') {
-        return foodArr.filter(x => x[property] > number)
-    } else {
-        return foodArr.filter(x => x[property] < number)
-    }
-}
+// const filterByProperty = (property, number, type) => {    
+//     if (type === 'above') {
+//         return foodArr.filter(x => x[property] > number)
+//     } else {
+//         return foodArr.filter(x => x[property] < number)
+//     }
+// }
+
 
 
 
@@ -207,3 +212,16 @@ const filterByProperty = (property, number, type) => {
 */
 
 // console.log(filterByProperty('price', 19, "above"))
+
+
+// Jeddy review code
+// const filterByProperty = (property, number, type) => {
+//     const filteredFood = foodArr.filter(x => {
+//         if (type === 'above') {
+//             return x[property] > number;
+//         } else {
+//             returnx[property] < number;
+//         }
+//     })
+//     return filteredFood;
+// }

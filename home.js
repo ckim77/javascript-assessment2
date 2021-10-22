@@ -47,7 +47,7 @@ const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 
 const canWeDeliver = zipcode => {
     if (deliveryAreaZipCodes.includes(zipcode)) {
-        console.log("You're in our deliver zone!");
+        console.log("You're in our delivery zone!");
     } else {
         console.log("Sorry, we can't deliver to that address");
     }
@@ -70,26 +70,41 @@ const canWeDeliver = zipcode => {
     Name your new function `canWeDeliverTwo`.
 */
 
-const canWeDeliverTwo = (x, y, cb) => {
+// const canWeDeliverTwo = (x, y, cb) => {
     
-    let validZipCode = cb(x,y);
+//     let validZipCode = cb(x,y);
     
-    if (validZipCode === true) {
-        console.log("You're in our delivery zone!");
-    } else {
-        console.log("Sorry, we can't deliver to that address!");
-    }
-}
+//     if (validZipCode === true) {
+//         console.log("You're in our delivery zone!");
+//     } else {
+//         console.log("Sorry, we can't deliver to that address!");
+//     }
+// }
 
-const zipCodeFinder = (arr, zipcode) => {
-    if (arr.includes(zipcode)) {
-        return true;
-    } else {
-        return false;
-    }
-}
+// const zipCodeFinder = (arr, zipcode) => {
+//     if (arr.includes(zipcode)) {
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
 
 // canWeDeliverTwo(deliveryAreaZipCodes, 85305, zipCodeFinder)
+
+// for loop method
+
+// const canWeDeliverTwo = zipcode => {
+//     for (let i = 0; i < deliveryAreaZipCodes.length; i++) {
+//       if (deliveryAreaZipCodes[i] === zipcode) {
+//         return 'You are in our delivery zone!';
+//       }
+//     }
+//     return 'Sorry, we cannot deliver to that address';
+//   }
+
+//   console.log(canWeDeliverTwo(85205));
+
+
 
 //////////////////PROBLEM 3////////////////////
 /* 
