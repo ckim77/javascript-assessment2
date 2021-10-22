@@ -33,9 +33,8 @@ const cart = [
     }
 ]
 
-//CODE HERE
-
-// const summedPrice = cart.reduce(/* CALLBACK HERE */)
+const total = cart.reduce((a, b) => a + b.price, 0)
+// console.log(total)
 
 
 //////////////////PROBLEM 2////////////////////
@@ -53,8 +52,10 @@ const cart = [
     decimals, for example: .06 for a 6% tax.
 */
 
-//CODE HERE
-
+const calcFinalPrice = (cartTotal, couponValue, tax) => {
+    let total = cartTotal * (tax+1) - couponValue;
+    return total;
+}
 
 
 //////////////////PROBLEM 3////////////////////
@@ -78,7 +79,9 @@ const cart = [
 */
 
 /*
-    TEXT ANSWER HERE
+I would have the 4 following objects: name, address, phone number, card type, card number, and tip percentage.
+I would use name, address and phone number so that I can contact the customer in case of an emergency.  This would be especially important for delivery.  Card is the most essential as this is the 
+payment method.  The tip amount is for the delivery guy, which is necessary for transactions in the States.
 
 */
 
@@ -87,4 +90,11 @@ const cart = [
     guidelines.
 */
 
-//CODE HERE
+const customer = {
+    name: 'Chris',
+    address: '7777 Willy Wonka Land',
+    phoneNumber: 123-4565-7654,
+    cardType: "Master Card",
+    cardNumber: 12342323456,
+    tipPct: 15 
+}
