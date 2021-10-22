@@ -21,11 +21,7 @@
     'Welcome back, Andrew'
 */
 
-//CODE HERE
-
-
-
-
+const greetUser = username => `Welcome back, ${username}`;
 
 //////////////////PROBLEM 2////////////////////
 /* 
@@ -49,9 +45,13 @@
 
 const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 
-//CODE HERE
-
-
+const canWeDeliver = zipcode => {
+    if (deliveryAreaZipCodes.includes(zipcode)) {
+        console.log("You're in our deliver zone!");
+    } else {
+        console.log("Sorry, we can't deliver to that address");
+    }
+}
 
 /* 
     Problem 2 Continued
@@ -70,8 +70,26 @@ const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
     Name your new function `canWeDeliverTwo`.
 */
 
-// CODE HERE
+const canWeDeliverTwo = (x, y, cb) => {
+    
+    let validZipCode = cb(x,y);
+    
+    if (validZipCode === true) {
+        console.log("You're in our delivery zone!");
+    } else {
+        console.log("Sorry, we can't deliver to that address!");
+    }
+}
 
+const zipCodeFinder = (arr, zipcode) => {
+    if (arr.includes(zipcode)) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+// canWeDeliverTwo(deliveryAreaZipCodes, 85305, zipCodeFinder)
 
 //////////////////PROBLEM 3////////////////////
 /* 
