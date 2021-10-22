@@ -182,19 +182,25 @@ const filteredFood = foodArr.filter(x => x.tags.includes('extra-cheese'))
         if it is, return objects whose value for the given
         property is greater than the `number` passed in
 
-        If the type isn't `below`, return objects whose
+        If the type is `below`, return objects whose
         value for the given property is less than the 
         `number` passed in
     
     Return the filtered array from the entire function
 */
 
-const filterByProperty = (property,number,type) => {
-    let filteredArr = foodArr.filter(x => x.rating === property || x.popularity === property || x.price === property).filter(y => y.number);
-    return filteredArr;
+const filterByProperty = (property, number, type) => {
+    let filteredArr = foodArr.filter(x => x[property])
+    
+    if (type === 'above') {
+        return filteredArr.filter(x => x[property] > number)
+    } else {
+        return filteredArr.filter(x => x[property] < number)
+    }
 }
 
-console.log(filterByProperty(price))
+console.log(filterByProperty('rating', 3, "below"))
+
 
 /*
     Invoke the `filterByProperty` function passing
