@@ -124,9 +124,9 @@ const deals = [
     to replace the 15 with a 10.
 */
 
-//CODE HERE
-
-
+let firstBlock = (deals[Object.keys(deals)[0]])
+let firstBlockReplace = firstBlock.title.replace('15', '10')
+// console.log(firstBlockReplace)
 
 /*
     The restaurant is going to continue its
@@ -141,4 +141,7 @@ const deals = [
     to be displaying wrong on the live site.
 */
 
-//CODE HERE
+let secondBlock = (deals[Object.keys(deals)[1]])
+let secondBlockMod = secondBlock.desc.trim().replace('March', 'April')
+
+// console.log(secondBlockMod)
