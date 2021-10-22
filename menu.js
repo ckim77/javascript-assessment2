@@ -109,7 +109,7 @@ let foodArr = [
     },
     {
         name: 'combo',
-        price: 20,
+        price: 10,
         category: 'entree',
         popularity: 3,
         rating: 2,
@@ -125,7 +125,7 @@ let foodArr = [
     },
     {
         name: 'chicken-bacon-ranch',
-        price: 20,
+        price: 25,
         category: 'entree',
         popularity: 2,
         rating: 3,
@@ -189,17 +189,14 @@ const filteredFood = foodArr.filter(x => x.tags.includes('extra-cheese'))
     Return the filtered array from the entire function
 */
 
-const filterByProperty = (property, number, type) => {
-    let filteredArr = foodArr.filter(x => x[property])
-    
+const filterByProperty = (property, number, type) => {    
     if (type === 'above') {
-        return filteredArr.filter(x => x[property] > number)
+        return foodArr.filter(x => x[property] > number)
     } else {
-        return filteredArr.filter(x => x[property] < number)
+        return foodArr.filter(x => x[property] < number)
     }
 }
 
-console.log(filterByProperty('rating', 3, "below"))
 
 
 /*
@@ -209,4 +206,4 @@ console.log(filterByProperty('rating', 3, "below"))
     You'll have to console.log to see the filtered array
 */
 
-//CODE HERE
+// console.log(filterByProperty('price', 19, "above"))
