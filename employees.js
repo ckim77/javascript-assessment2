@@ -65,6 +65,10 @@ let empOne = new Employee ('Jess', 'weekday mornings and weekday afternoons')
 let empTwo = {... empOne};
 let Nick = empTwo;
 
+// code review
+const empTwo = {... empOne, name: 'Nick'};
+// console.log(empTwo)
+
 
 //////////////////PROBLEM 2////////////////////
 /*  
