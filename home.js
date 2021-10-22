@@ -141,7 +141,10 @@ const deals = [
 
 let firstBlock = (deals[Object.keys(deals)[0]])
 let firstBlockReplace = firstBlock.title.replace('15', '10')
-// console.log(firstBlockReplace)
+
+// review code
+deals[0].title = deals[0].title.replace('15','10')
+// console.log(deals)
 
 /*
     The restaurant is going to continue its
@@ -159,4 +162,7 @@ let firstBlockReplace = firstBlock.title.replace('15', '10')
 let secondBlock = (deals[Object.keys(deals)[1]])
 let secondBlockMod = secondBlock.desc.trim().replace('March', 'April')
 
-// console.log(secondBlockMod)
+// review code
+
+deals[0].desc = deals[1].desc.trim().replace('March, April')
+// console.log(deals)
